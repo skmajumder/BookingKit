@@ -1,0 +1,538 @@
+/*============================================================================================*/
+/* Custom styles below */
+/*============================================================================================*/
+
+select
+.tab-content {
+    margin-bottom: 30px;
+}
+
+.checkbox_2 input[type="checkbox"], .checkbox-holder label {
+    cursor: pointer;
+}
+
+.btn_1:disabled {
+    opacity: 0.4;
+}
+
+.btn_1:disabled:hover {
+    opacity: 0.4;
+    background-color: #E74E84;
+    cursor: no-drop;
+}
+
+.error {
+    color: #FF0000;
+}
+
+.server_error_message {
+    color: #F00;
+    /*color: #f26c4f;*/
+    /*font-size: 14px;*/
+    /*display: block;*/
+    /*background-color: #fff;*/
+    /*padding: 10px 0;*/
+    /*border-radius: 5px;*/
+    /*margin: 8px 47px;*/
+    /*-webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);*/
+    /*-moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);*/
+    /*box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);*/
+    text-transform: capitalize;
+}
+
+meter {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 10px auto 1em;
+    width: 100%;
+    height: .5em;
+
+    /* Applicable only to Firefox */
+    background: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+meter::-webkit-meter-bar {
+    background: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+meter[value="1"]::-webkit-meter-optimum-value {
+    background: red;
+}
+
+meter[value="2"]::-webkit-meter-optimum-value {
+    background: yellow;
+}
+
+meter[value="3"]::-webkit-meter-optimum-value {
+    background: orange;
+}
+
+meter[value="4"]::-webkit-meter-optimum-value {
+    background: green;
+}
+
+meter[value="1"]::-moz-meter-bar {
+    background: red;
+}
+
+meter[value="2"]::-moz-meter-bar {
+    background: yellow;
+}
+
+meter[value="3"]::-moz-meter-bar {
+    background: orange;
+}
+
+meter[value="4"]::-moz-meter-bar {
+    background: green;
+
+}
+
+.feedback {
+    color: #9ab;
+    font-size: 90%;
+    padding: 0 .25em;
+    margin-top: 1em;
+}
+
+/* Common, default styles for the notification box */
+
+.ns-box {
+    position: fixed;
+    background: rgba(42, 45, 50, 0.85);
+    padding: 22px;
+    line-height: 1.4;
+    z-index: 1000;
+    pointer-events: none;
+    color: rgba(250, 251, 255, 0.95);
+    font-size: 90%;
+    font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+.ns-box.ns-show {
+    pointer-events: auto;
+}
+
+.ns-box a {
+    color: inherit;
+    opacity: 0.7;
+    font-weight: 700;
+}
+
+.ns-box a:hover,
+.ns-box a:focus {
+    opacity: 1;
+}
+
+.ns-box p {
+    margin: 0;
+}
+
+.ns-box.ns-show,
+.ns-box.ns-visible {
+    pointer-events: auto;
+}
+
+.ns-close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    overflow: hidden;
+    text-indent: 100%;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.ns-close:hover,
+.ns-close:focus {
+    outline: none;
+}
+
+.ns-close::before,
+.ns-close::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    background: #6e6e6e;
+}
+
+.ns-close:hover::before,
+.ns-close:hover::after {
+    background: #fff;
+}
+
+.ns-close::before {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ns-close::after {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Growl-style notifications */
+.ns-attached {
+    left: 30px;
+    max-width: 300px;
+}
+
+[class^="ns-effect-"].ns-attached.ns-hide,
+[class*=" ns-effect-"].ns-attached.ns-hide {
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+/* Individual effects */
+
+/* Flip */
+.ns-effect-flip {
+    background: #9bd1a2;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    bottom: 0px;
+    font-size: 1.15em;
+    padding: 1.5em;
+    max-width: 280px;
+    backface-visibility: hidden;
+}
+
+.ns-effect-flip .ns-close::before,
+.ns-effect-flip .ns-close::after {
+    background: #5a9862;
+}
+
+.ns-effect-flip .ns-close:hover::before,
+.ns-effect-flip .ns-close:hover::after {
+    background: #4e8455;
+}
+
+.ns-effect-flip.ns-show,
+.ns-effect-flip.ns-hide {
+    -webkit-animation-name: animFlipFront;
+    animation-name: animFlipFront;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+
+.ns-effect-flip.ns-hide {
+    -webkit-animation-name: animFlipBack;
+    animation-name: animFlipBack;
+}
+
+@-webkit-keyframes animFlipFront {
+    0% {
+        -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+    }
+    100% {
+        -webkit-transform: perspective(1000px);
+    }
+}
+
+@keyframes animFlipFront {
+    0% {
+        -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+        transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+    }
+    100% {
+        -webkit-transform: perspective(1000px);
+        transform: perspective(1000px);
+    }
+}
+
+@-webkit-keyframes animFlipBack {
+    0% {
+        -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+    }
+    100% {
+        -webkit-transform: perspective(1000px);
+    }
+}
+
+@keyframes animFlipBack {
+    0% {
+        -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+    }
+    100% {
+        -webkit-transform: perspective(1000px);
+        transform: perspective(1000px);
+    }
+}
+
+/* Bouncy Flip adapted from animate.css by Dan Eden: http://daneden.github.io/animate.css/ */
+.ns-effect-bouncyflip {
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    background: #fff;
+    color: #484860;
+    top: 0;
+    box-shadow: 0 13px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.ns-effect-bouncyflip .icon {
+    position: absolute;
+    display: block;
+    top: 2em;
+    left: 2em;
+}
+
+.ns-effect-bouncyflip p {
+    padding: 0.5em 0.8em 0.8em 3.5em;
+}
+
+.ns-effect-bouncyflip .ns-close::after,
+.ns-effect-bouncyflip .ns-close::before {
+    background: #484860;
+}
+
+.ns-effect-bouncyflip .ns-close:hover::after,
+.ns-effect-bouncyflip .ns-close:hover::before {
+    background: #545484;
+}
+
+.ns-effect-bouncyflip.ns-show,
+.ns-effect-bouncyflip.ns-hide {
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+}
+
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+        -webkit-transition-timing-function: ease-in;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 20deg);
+        -webkit-transition-timing-function: ease-out;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -10deg);
+        -webkit-transition-timing-function: ease-in;
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 5deg);
+        -webkit-transition-timing-function: ease-out;
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+    }
+}
+
+@keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 20deg);
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -10deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 5deg);
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+.ns-effect-bouncyflip.ns-hide {
+    -webkit-animation-name: flipInXSimple;
+    animation-name: flipInXSimple;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+
+@-webkit-keyframes flipInXSimple {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+        -webkit-transition-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: perspective(400px);
+    }
+}
+
+@keyframes flipInXSimple {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+@media screen and (max-width: 25em) {
+    .ns-attached {
+        left: 30px;
+        max-width: none;
+        right: 30px;
+    }
+}
+
+.user-failed-icon img {
+    height: 120px;
+}
+
+#login h3 {
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.wrapper_indent p {
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+
+.list-block {
+    display: none;
+}
+
+.validation-message {
+    margin-top: 14px;
+    margin-bottom: -60px;
+}
+
+.student-profile a {
+    margin-bottom: 12px;
+}
+
+.student-profile .card-body span {
+    display: block;
+    margin: -2px 0;
+}
+
+.notice-layout > .strip_list {
+    padding: 35px 15px 35px 20px !important;
+}
+
+.notice-date {
+    margin-bottom: 5px;
+}
+
+.singlepost {
+    background-color: #fff;
+    padding: 30px 30px 5px 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+}
+
+.postmeta {
+    padding-bottom: 10px;
+}
+
+.postmeta ul {
+    margin-bottom: 10px;
+}
+
+.postmeta ul li {
+    display: block;
+    margin: 0px 10px 14px 0;
+}
+
+.postmeta ul li a {
+    color: #e74e84;
+}
+
+.singlepost p {
+    line-height: 1.8;
+}
+
+.widget {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.widget-title {
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.widget-title h4 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 15px;
+    font-size: 0.9375rem;
+}
+
+.comments-list {
+    padding: 0;
+    list-style: none;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 15px 10px 0;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.comments-list small {
+    color: #999999;
+}
+
+.comments-list h3 {
+    font-size: 14px;
+    padding: 0 0 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}

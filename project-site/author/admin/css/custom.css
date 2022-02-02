@@ -1,0 +1,102 @@
+/* YOUR CUSTOM CSS */
+
+#user_img, #academy_img, #student_img, #student_id_img, #student_cv {
+    display: none;
+    visibility: hidden;
+}
+
+#user_img_label, #academy_img_label, #student_img_label, #student_id_img_label, #student_cv_label {
+    border: 1px solid #ced4da;
+    padding: 12px 0px;
+    display: block;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #E9ECEF;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+#update_password_strength_meter {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    background: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+meter::-webkit-meter-bar {
+    background: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+meter[value="1"]::-webkit-meter-optimum-value {
+    background: red;
+}
+
+meter[value="2"]::-webkit-meter-optimum-value {
+    background: yellow;
+}
+
+meter[value="3"]::-webkit-meter-optimum-value {
+    background: orange;
+}
+
+meter[value="4"]::-webkit-meter-optimum-value {
+    background: green;
+}
+
+meter[value="1"]::-moz-meter-bar {
+    background: red;
+}
+
+meter[value="2"]::-moz-meter-bar {
+    background: yellow;
+}
+
+meter[value="3"]::-moz-meter-bar {
+    background: orange;
+}
+
+meter[value="4"]::-moz-meter-bar {
+    background: green;
+
+}
+
+.feedback {
+    color: #9ab;
+    font-size: 90%;
+    padding: 0 .25em;
+    margin-top: 1em;
+}
+
+#industry_information_details label {
+    cursor: pointer;
+}
+
+.small-warning-text {
+    color: #e74c3c;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+#academy_profile_update label {
+    cursor: pointer;
+}
+
+input[type="text"]:hover, input[type="email"]:hover {
+    background-color: #E9ECEF;
+}
+
+.error_message {
+    font-weight: 500;
+    color: #f26c4f;
+    display: inline-block;
+    margin-bottom: 10px;
+}

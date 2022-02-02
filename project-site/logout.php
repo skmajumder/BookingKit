@@ -1,0 +1,11 @@
+<?php
+include "functions/init.php";
+// Destroy the session
+session_destroy();
+
+if (isset($_COOKIE['email'])) {
+    unset($_COOKIE['email']);
+    setcookie('email', '', time() - 86400);
+}
+
+get_redirect("login.php");
